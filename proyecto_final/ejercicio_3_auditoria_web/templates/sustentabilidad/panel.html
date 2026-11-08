@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ titulo }}</title>
+    <style>
+        body { font-family: system-ui, sans-serif; margin: 2rem; color: #222; }
+        .kpi { display: inline-block; padding: 1rem 1.5rem; margin-right: 1rem;
+               border: 1px solid #ddd; border-radius: 8px; }
+        table { border-collapse: collapse; margin-top: 1.5rem; min-width: 320px; }
+        th, td { padding: .5rem 1rem; border-bottom: 1px solid #eee; text-align: left; }
+    </style>
+</head>
+<body>
+    <h1>{{ titulo }}</h1>
+
+    <div class="kpi">
+        <strong>Emisiones totales</strong><br>
+        {{ total_emisiones }} kgCO₂
+    </div>
+    <div class="kpi">
+        <strong>Planta de mayor consumo</strong><br>
+        {{ planta_mayor_consumo }}
+    </div>
+
+    <table>
+        <thead>
+            <tr><th>Planta</th><th>Emisiones (kgCO₂)</th></tr>
+        </thead>
+        <tbody>
+            {% for planta, emision in emisiones_por_planta.items %}
+            <tr><td>{{ planta }}</td><td>{{ emision }}</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

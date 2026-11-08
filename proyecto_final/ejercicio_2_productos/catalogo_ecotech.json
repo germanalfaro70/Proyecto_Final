@@ -1,0 +1,18 @@
+[
+    {
+        "tipo": "PanelSolar",
+        "nombre": "Panel Solar Pro",
+        "precio": 150000,
+        "stock": 10,
+        "potencia_w": 450,
+        "eficiencia": 21.5
+    },
+    {
+        "tipo": "PanelSolar",
+        "nombre": "Panel Solar Max",
+        "precio": 210000,
+        "stock": 3,
+        "potencia_w": 550,
+        "eficiencia": 22.8
+    }
+]
